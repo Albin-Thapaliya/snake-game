@@ -19,6 +19,22 @@ var Snake = (function() {
     ctx.fillRect(0, 0, canv.width, canv.height);
 
   }
-
+  
+function keyPush(evt) {
+    switch(evt.keyCode) {
+        case 37:
+            player.x--;
+            break;
+        case 38:
+            player.y--;
+            break;
+        case 39:
+            player.x++;
+            break;
+        case 40:
+            player.y++;
+            break;
+    }
+}
   window.onload = setup;
 })();
